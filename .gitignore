@@ -1,16 +1,37 @@
-# Compiled class file
-*.class
+# Gradle
+.gradle/
+build/
 
-# Log file
+# Java
+*.class
+hs_err_pid*
+replay_pid*
+
+# Logs
 *.log
 
-# BlueJ files
-*.ctxt
+# IDEs
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.metadata/
+out/
 
-# Mobile Tools for Java (J2ME)
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# BlueJ
+*.ctxt
 .mtj.tmp/
 
-# Package Files #
+# Archives and packaged artifacts
 *.jar
 *.war
 *.nar
@@ -18,7 +39,4 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+!gradle/wrapper/gradle-wrapper.jar

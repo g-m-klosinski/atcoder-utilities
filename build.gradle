@@ -1,0 +1,20 @@
+/*
+ * Java application build configuration.
+ */
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:23.0'
+    testImplementation 'junit:junit:4.12'
+}
+
+application {
+    mainClass = 'App'
+}
+
