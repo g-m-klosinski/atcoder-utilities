@@ -6,16 +6,16 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    implementation 'com.google.guava:guava:23.0'
+  implementation 'com.google.guava:guava:23.0'
     implementation 'org.jsoup:jsoup:1.23.2'
     testImplementation 'junit:junit:4.12'
 }
 
 application {
-    mainClass = 'App'
+  mainClass = 'App'
 }
 
