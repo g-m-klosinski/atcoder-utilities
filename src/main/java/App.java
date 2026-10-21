@@ -7,24 +7,26 @@ public class App {
     For example: atcoder-utilities abc 150 g""";
 
   public static void main(String[] args) {
-    if (args.length != 3) {
-      System.out.println(usageInstruction);
+    Optional<String> errorMessage = checkTaskValidity(args);
+
+    if (errorMessage.isPresent()) {
+      System.out.println(errorMessage.get());
       return;
     }
     
     var taskUrl = makeTaskUrl(args);
-
-    if (!taskUrl.isPresent()) {
-      System.out.println(usageInstruction);
-      return;
-    }
-    
-    var tests = new TaskTests(taskUrl.get()); 
+    var tests = new TaskTests(taskUrl); 
 
     tests.dump();
   }
 
-  public static Optional<String> makeTaskUrl(String[] coordinates) {
+  public static Optional<String> checkTaskValidity(String[] coordinates) {
+    // todo: develop this stub
     return Optional.empty();
+  }
+
+  public static String makeTaskUrl(String[] coordinates) {
+    // todo: develop this stub
+    return "";
   }
 }
