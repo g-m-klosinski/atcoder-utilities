@@ -36,7 +36,7 @@ public class App {
               """ + USAGE_INSTRUCTION);
     }
 
-    var numberPattern = Pattern.compile("\\d+");
+    var numberPattern = Pattern.compile("[1-9]\\d*");
     var numberMatcher = numberPattern.matcher(coordinates[1]);
 
     if (!numberMatcher.matches()) {
