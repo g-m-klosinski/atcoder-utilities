@@ -119,4 +119,25 @@ public class AppTest {
             assertTrue(errorMessage.isEmpty());
         }
     }
+
+    @Test
+    public void checkTaskValidityAcceptsNumbers() {
+        String[] coordinates = {"abc", "", "a"};
+
+        String[] numbers = {
+                "1",
+                "9",
+                "10",
+                "99"
+        };
+
+        for (String number: numbers) {
+            coordinates[1] = number;
+
+            Optional<String> errorMessage =
+                    App.checkTaskValidity(coordinates);
+
+            assertTrue(errorMessage.isEmpty());
+        }
+    }
 }
