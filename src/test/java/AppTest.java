@@ -99,4 +99,24 @@ public class AppTest {
             );
         }
     }
+
+    @Test
+    public void checkTaskValidityAcceptsNames() {
+        String[] coordinates = {"", "1", "a"};
+
+        String[] names = {
+                "abc",
+                "arc",
+                "agc"
+        };
+
+        for (String name: names) {
+            coordinates[0] = name;
+
+            Optional<String> errorMessage =
+                    App.checkTaskValidity(coordinates);
+
+            assertTrue(errorMessage.isEmpty());
+        }
+    }
 }
