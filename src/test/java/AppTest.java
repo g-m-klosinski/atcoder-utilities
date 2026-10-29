@@ -48,4 +48,55 @@ public class AppTest {
             ));
         }
     }
+
+    @Test
+    public void checkTaskValidityAlertsOnInvalidNumber() {
+        String[] coordinates = {"abc", "", "a"};
+
+        String[] numbers = {
+                "-1",
+                "0",
+                "01",
+                ""
+        };
+
+        for (String number: numbers) {
+            coordinates[1] = number;
+
+            Optional<String> errorMessage =
+                    App.checkTaskValidity(coordinates);
+
+            assertTrue(errorMessage.isPresent());
+            assertTrue(errorMessage.get().startsWith(
+                    "Invalid argument for \"number\""
+            ));
+        }
+    }
+
+    @Test
+    public void checkTaskValidityAlertsOnInvalidLetter() {
+        String[] coordinates = {"abc", "1", ""};
+
+        String[] nonLetters = {
+                "",
+                "0",
+                "10",
+                "aa",
+                "a1",
+                "1a"
+        };
+
+        for (String nonLetter: nonLetters) {
+            coordinates[2] = nonLetter;
+
+            Optional<String> errorMessage =
+                    App.checkTaskValidity(coordinates);
+
+            assertTrue(errorMessage.isPresent());
+            assertTrue(errorMessage.get().startsWith("""
+                    Invalid argument for "task letter"\
+                    """)
+            );
+        }
+    }
 }
