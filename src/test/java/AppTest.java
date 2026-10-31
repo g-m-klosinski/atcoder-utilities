@@ -140,4 +140,22 @@ public class AppTest {
             assertTrue(errorMessage.isEmpty());
         }
     }
+
+    @Test
+    public void checkTaskValidityAcceptsLetters() {
+        String[] coordinates = {"abc", "1", ""};
+
+        String[] letters = {
+                "a", "b", "z"
+        };
+
+        for (String letter: letters) {
+            coordinates[2] = letter;
+
+            Optional<String> errorMessage =
+                    App.checkTaskValidity(coordinates);
+
+            assertTrue(errorMessage.isEmpty());
+        }
+    }
 }
