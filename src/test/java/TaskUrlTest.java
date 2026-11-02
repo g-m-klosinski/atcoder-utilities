@@ -159,4 +159,18 @@ public class TaskUrlTest {
             assertTrue(errorMessage.isEmpty());
         }
     }
+
+    @Test
+    public void makeTaskUrlInsertsCoordinates() {
+        final String pattern =
+                "https://atcoder.jp/contests/%1$s%2$s/tasks/%1$s%2$s_%3$s";
+
+        final String[] coordinates = {"arc", "2", "b"};
+
+        final String url = TaskUrl.makeTaskUrl(coordinates);
+
+        final String expected = String.format(pattern, coordinates);
+
+        assertSame(expected, url);
+    }
 }
