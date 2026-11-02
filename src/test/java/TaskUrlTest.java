@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import static org.junit.Assert.*;
 
-public class AppTest {
+public class TaskUrlTest {
     @Test
     public void checkTaskValidityAlertsOnZeroArguments() {
         var coordinates = new String[] {};
