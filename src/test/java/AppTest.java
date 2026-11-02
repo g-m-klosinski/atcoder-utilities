@@ -9,7 +9,8 @@ public class AppTest {
     public void checkTaskValidityAlertsOnZeroArguments() {
         var coordinates = new String[] {};
 
-        Optional<String> errorMessage = App.checkTaskValidity(coordinates);
+        Optional<String> errorMessage =
+                TaskUrl.checkTaskValidity(coordinates);
 
         assertTrue(errorMessage.isPresent());
         assertTrue(errorMessage.get().startsWith("Usage:"));
@@ -39,7 +40,7 @@ public class AppTest {
             coordinates[0] = name;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isPresent());
             assertTrue(errorMessage.get().startsWith("""
@@ -64,7 +65,7 @@ public class AppTest {
             coordinates[1] = number;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isPresent());
             assertTrue(errorMessage.get().startsWith(
@@ -90,7 +91,7 @@ public class AppTest {
             coordinates[2] = nonLetter;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isPresent());
             assertTrue(errorMessage.get().startsWith("""
@@ -114,7 +115,7 @@ public class AppTest {
             coordinates[0] = name;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isEmpty());
         }
@@ -135,7 +136,7 @@ public class AppTest {
             coordinates[1] = number;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isEmpty());
         }
@@ -153,7 +154,7 @@ public class AppTest {
             coordinates[2] = letter;
 
             Optional<String> errorMessage =
-                    App.checkTaskValidity(coordinates);
+                    TaskUrl.checkTaskValidity(coordinates);
 
             assertTrue(errorMessage.isEmpty());
         }
