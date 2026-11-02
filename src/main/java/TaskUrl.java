@@ -2,6 +2,13 @@ import java.util.Optional;
 import java.util.regex.Pattern;
 
 public class TaskUrl {
+    /**
+     * Insert three `String` arguments to form a task URL:
+     * https://atcoder.jp/contests/$1$2/tasks/$1$2_$3
+     * @param coordinates A triple name-number-letter, e.g.
+     *                    ["arc", "5", "b"]
+     * @return The URL of the task
+     */
     public static String makeTaskUrl(String[] coordinates) {
         return "";
     }
