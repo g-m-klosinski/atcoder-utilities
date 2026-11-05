@@ -169,8 +169,15 @@ public class TaskUrlTest {
 
         final String url = TaskUrl.makeTaskUrl(coordinates);
 
-        final String expected = String.format(pattern, coordinates);
+        final String expected = String.format(
+                pattern,
+                coordinates[0],
+                coordinates[1],
+                coordinates[0],
+                coordinates[1],
+                coordinates[2]
+        );
 
-        assertSame(expected, url);
+        assertEquals(expected, url);
     }
 }
