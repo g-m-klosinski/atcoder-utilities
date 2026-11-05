@@ -10,7 +10,19 @@ public class TaskUrl {
      * @return The URL of the task
      */
     public static String makeTaskUrl(String[] coordinates) {
-        return "";
+        final String pattern =
+                "https://atcoder.jp/contests/%1$s%2$s/tasks/%1$s%2$s_%3$s";
+
+        final String url = String.format(
+                pattern,
+                coordinates[0],
+                coordinates[1],
+                coordinates[0],
+                coordinates[1],
+                coordinates[2]
+        );
+
+        return url;
     }
 
     public static Optional<String> checkTaskValidity(String[] coordinates) {
