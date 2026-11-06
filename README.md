@@ -6,6 +6,6 @@ A command line toolkit helping in participation in AtCoder contests
 ## Roadmap
 
 The app is non-functional yet and has the following roadmap:
-- [ ] Implement task URL creation
+- [x] Implement task URL creation
 - [ ] Implement task scraping
 - [ ] Implement writing test cases to files
