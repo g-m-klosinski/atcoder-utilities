@@ -1,17 +1,14 @@
 import java.util.Optional;
 
 public class App {
-  public static void main(String[] args) {
-    Optional<String> errorMessage = TaskUrl.checkTaskValidity(args);
+    public static void main(String[] args) {
+        try {
+            var taskUrl = TaskUrl.makeTaskUrl(args);
 
-    if (errorMessage.isPresent()) {
-      System.out.println(errorMessage.get());
-      return;
+            var tests = new TaskTests(taskUrl);
+            tests.dump();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
-    
-    var taskUrl = TaskUrl.makeTaskUrl(args);
-    var tests = new TaskTests(taskUrl); 
-
-    tests.dump();
-  }
 }

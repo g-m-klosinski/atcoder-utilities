@@ -161,7 +161,7 @@ public class TaskUrlTest {
     }
 
     @Test
-    public void makeTaskUrlInsertsCoordinates() {
+    public void makeTaskUrlInsertsCoordinates() throws Exception {
         final String pattern =
                 "https://atcoder.jp/contests/%1$s%2$s/tasks/%1$s%2$s_%3$s";
 

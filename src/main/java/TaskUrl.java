@@ -9,7 +9,14 @@ public class TaskUrl {
      *                    ["arc", "5", "b"]
      * @return The URL of the task
      */
-    public static String makeTaskUrl(String[] coordinates) {
+    public static String makeTaskUrl(String[] coordinates) throws Exception {
+        final Optional<String> errorMessage =
+                checkTaskValidity(coordinates);
+
+        if (errorMessage.isPresent()) {
+            throw new Exception(errorMessage.get());
+        }
+
         final String pattern =
                 "https://atcoder.jp/contests/%1$s%2$s/tasks/%1$s%2$s_%3$s";
 
