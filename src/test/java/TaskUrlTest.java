@@ -173,8 +173,6 @@ public class TaskUrlTest {
                 pattern,
                 coordinates[0],
                 coordinates[1],
-                coordinates[0],
-                coordinates[1],
                 coordinates[2]
         );
 
