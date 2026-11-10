@@ -8,4 +8,4 @@ A command line toolkit helping in participation in AtCoder contests
 The app is non-functional yet and has the following roadmap:
 - [x] Implement task URL creation
 - [x] Implement task scraping
-- [ ] Implement writing test cases to files
+- [x] Implement writing test cases to files
