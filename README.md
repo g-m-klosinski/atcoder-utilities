@@ -33,3 +33,11 @@ temporary directory, for example:
 ```
 
 Client software may assume the prefix to be `atcoder-abc400_b`.
+
+## Limitations
+
+The application fetches the data by CSS selectors, such as:
+```css
+h3:contains(Sample Input) + pre
+```
+It may break if AtCoder changes their DOM.
