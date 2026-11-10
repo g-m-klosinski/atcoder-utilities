@@ -2,6 +2,12 @@
 
 A command line tool to fetch test vectors from an AtCoder contest task
 
+## Abuse Warning
+
+This application consumes server resources by scraping the page.
+This application is intended for manual execution. Repeated,
+automated execution requires approval from the AtCoder team.
+
 ## Usage
 
 Run the application with task coordinates, for example:
