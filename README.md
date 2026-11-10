@@ -32,7 +32,7 @@ temporary directory, for example:
 │   └── 4.out
 ```
 
-Client software may assume the prefix to be `atcoder-abc400_b`.
+Client software may assume the prefix to be `atcoder-abc400_b` in this case.
 
 ## Limitations
 
