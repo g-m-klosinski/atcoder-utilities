@@ -7,5 +7,5 @@ A command line toolkit helping in participation in AtCoder contests
 
 The app is non-functional yet and has the following roadmap:
 - [x] Implement task URL creation
-- [ ] Implement task scraping
+- [x] Implement task scraping
 - [ ] Implement writing test cases to files
